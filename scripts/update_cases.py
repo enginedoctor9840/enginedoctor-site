@@ -14,7 +14,7 @@ SERIES = re.compile(r"([2-9]|1\d)\s*일차|[2-9]\s*편|\(\s*[2-9]\s*\)")
 LIMIT = 8
 # 정비 사례로 보이는 글만: 분류명이나 제목에 아래 단어가 있으면 포함, 스터디 글은 제외
 INCLUDE = re.compile(r"수리|소모품|유지보수|오버홀|교체|정비|점검")
-EXCLUDE = re.compile(r"스터디")
+EXCLUDE = re.compile(r"스터디|study", re.I)
 
 def clean_link(link):
     m = re.search(r"/(\d{9,})", link)
