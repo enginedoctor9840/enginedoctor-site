@@ -67,6 +67,8 @@ a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .ctl button{width:40px;height:40px;border:0;background:transparent;color:#fff;font-size:26px;line-height:1;cursor:pointer;border-radius:50%}
 .ctl button:hover{background:rgba(255,255,255,.15)}
 .ctl .cnt{min-width:52px;text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+.about.one{grid-template-columns:minmax(0,1fr)}
+.about.one>div{max-width:760px}
 .about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:start}
 .about p+p{margin-top:12px}
 .stat{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:0;border-radius:10px;overflow:hidden;margin-top:28px}
@@ -197,7 +199,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 </div></div>
 </header>
 
-<section class="band" id="about"><div class="wrap about">
+<section class="band" id="about"><div class="wrap about one">
 <div>
 <span class="lbl">ABOUT</span>
 <h2>정전 그 순간,<br>반드시 돌아가야 하니까</h2>
@@ -205,18 +207,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 <p style="margin-top:22px">안녕하십니까, 엔진닥터 김부장입니다.</p>
 <p>비상발전기는 1년 내내 멈춰 있다가 정전이 나는 순간 반드시 돌아가야 하는 설비입니다. 엔진닥터는 아파트, 빌딩, 학교, 공공기관 등 전국 약 <span data-count>500</span>곳의 현장에서 비상발전기를 점검하고 고쳐 왔습니다. 큰 고장이 나기 전에 작은 신호를 먼저 찾아내는 것이 저희 원칙입니다.</p>
 <div class="stat">
-<div class="big"><span class="cap">현재 누적 작업 현장</span><b><em data-count data-anim>500</em><small>곳</small></b><span class="sub">전국 출장 · 새 현장 기록마다 자동 갱신</span></div>
+<div class="big"><span class="cap">현재 누적 작업 현장</span><b><em data-count data-anim>500</em><small>곳</small></b><span class="sub">전국 출장</span></div>
 <ul>
 <li><b>아파트 · 건물 · 공공시설</b> 비상발전기 전반, LH 임대아파트 단지 정기 정비 다수 수행</li>
 <li><b>대학교 · 공공기관</b> 비상발전기 환경개선 공사</li>
 <li><b>두산 · 디트로이트 · MAN</b> 등 엔진 정비 · 오버홀</li>
 </ul>
 </div>
-</div>
-<div class="trio" style="align-self:end">
-<figure><img src="img/gen-doosan.jpg" alt="두산 엔진 발전기 앞에 준비한 교체용 소모품"><figcaption>두산 엔진 정기 소모품 교체</figcaption></figure>
-<figure><img src="img/consumables.jpg" alt="엔진오일과 부동액, 필터 등 교체용 소모품"><figcaption>대형 발전기 소모품 교체 준비</figcaption></figure>
-<figure><img src="img/gen-red.jpg" alt="발전기실의 비상발전기"><figcaption>비상발전기 상태점검</figcaption></figure>
 </div>
 </div></section>
 
