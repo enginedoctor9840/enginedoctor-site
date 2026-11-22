@@ -48,16 +48,190 @@
   "link": "https://blog.naver.com/gk8192/224467667648"
  },
  {
+  "title": "울산 발전기수리 ㅣ 현대 DUAU-R 비상발전기 냉각수 부족, 소모품 일괄 교체",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.11.09",
+  "link": "https://blog.naver.com/gk8192/224467654134"
+ },
+ {
   "title": "인천 발전기수리 ㅣ 두산 P222LE 비상발전기 소모품 교체",
   "category": "소모품 교체 및 유지보수",
-  "date": "",
+  "date": "2026.11.06",
   "link": "https://blog.naver.com/gk8192/224466468174"
  },
  {
+  "title": "발전기수리 ㅣ 두산 P222FE 비상발전기 시동불량, 원인은 작은 릴레이 하나였습니다",
+  "category": "고장수리(Repair)",
+  "date": "2026.11.05",
+  "link": "https://blog.naver.com/gk8192/224465373616"
+ },
+ {
+  "title": "구리 발전기수리 ㅣ 두산 DP180LA 예열히터 교체 및 실리콘 호스 교체",
+  "category": "고장수리(Repair)",
+  "date": "2026.11.02",
+  "link": "https://blog.naver.com/gk8192/224451111035"
+ },
+ {
+  "title": "대구 발전기수리 ㅣ 두산 P126TI 냉각수 과온, 스케일로 고착된 서모스탯 교체 작업",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.30",
+  "link": "https://blog.naver.com/gk8192/224451048769"
+ },
+ {
+  "title": "부산 발전기수리 ㅣ 비상발전기 배터리·정류기반 배터리 일괄교체, 히터호스까지 정비",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.10.29",
+  "link": "https://blog.naver.com/gk8192/224450902794"
+ },
+ {
+  "title": "발전기수리 ㅣ 두산 P126TI-II 오일압력 0.2bar 표시, 원인은 컨트롤러 COM- 미결선",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.28",
+  "link": "https://blog.naver.com/gk8192/224449520869"
+ },
+ {
+  "title": "대구 발전기수리 ㅣ 두산 P126TI 냉각수 과온 정지, 수온센서 교체로 해결",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.27",
+  "link": "https://blog.naver.com/gk8192/224449500440"
+ },
+ {
+  "title": "비상발전기 위에서 오일이 넘쳐 타붙었다면? 브리더 오일 배출, 이 신호부터 보세요",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.26",
+  "link": "https://blog.naver.com/gk8192/224446606443"
+ },
+ {
+  "title": "비상발전기 월 1회 점검, 무부하로 몇 분정도 돌려야하나???",
+  "category": "발전기 관련 study",
+  "date": "2026.10.24",
+  "link": "https://blog.naver.com/gk8192/224446586062"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 비상발전기 배터리 폭발사고 점검",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.23",
+  "link": "https://blog.naver.com/gk8192/224446569552"
+ },
+ {
+  "title": "발전기수리 ㅣ 비상발전기 시동불량, 스피드컨트롤러 고장이 원인이었던 교체 사례",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.22",
+  "link": "https://blog.naver.com/gk8192/224446554917"
+ },
+ {
+  "title": "부산 사상구 발전기수리 ㅣ 비상발전기 전압형성 불가점검(출력전압 6v, avr f+,f-전압도 없을때?)",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.20",
+  "link": "https://blog.naver.com/gk8192/224446514265"
+ },
+ {
   "title": "대구 달서구 발전기수리 ㅣ 충전전압 이상 후속조치, 배터리충전기 교체와 소모품 교체까지",
-  "category": "고장 수리",
-  "date": "",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.10.12",
   "link": "https://blog.naver.com/gk8192/224438382348"
+ },
+ {
+  "title": "발전기수리 ㅣ 두산 DP222LA 기동할 때만 뿜는 매연, 고장일까 정상일까?",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.05",
+  "link": "https://blog.naver.com/gk8192/224424835770"
+ },
+ {
+  "title": "부산 강서구 발전기수리 ㅣ 두산 P086TI 엔진 소모품 교체",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.10.02",
+  "link": "https://blog.naver.com/gk8192/224424633516"
+ },
+ {
+  "title": "부산 동구 발전기수리 ㅣ QST30-G4 냉각수 누수, 범인은 예열히터 과열이었습니다",
+  "category": "고장수리(Repair)",
+  "date": "2026.10.01",
+  "link": "https://blog.naver.com/gk8192/224424620496"
+ },
+ {
+  "title": "냉각수 펌프 돌리자마자 차단기 트립..",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.30",
+  "link": "https://blog.naver.com/gk8192/224424558800"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 정전신호는 들어오는데 스타트 출력이 없다? 아날로그 ECU 불량, 디지털 컨트롤러(NEOGCP I7)로 교체한 이야기",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.29",
+  "link": "https://blog.naver.com/gk8192/224424498949"
+ },
+ {
+  "title": "대전 발전기수리 ㅣ 두산 D1146T 비상발전기 소모품 일체 교체",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.09.28",
+  "link": "https://blog.naver.com/gk8192/224424399359"
+ },
+ {
+  "title": "창녕 발전기수리 ㅣ 바이오가스 엔진 픽업센서 교체, 근본원인은 따로 있었습니다",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.25",
+  "link": "https://blog.naver.com/gk8192/224420507900"
+ },
+ {
+  "title": "부산 연제구 발전기수리 ㅣ 비상발전기 자동기동 불량, 원인은 작은 타이머 하나였습니다",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.24",
+  "link": "https://blog.naver.com/gk8192/224420496038"
+ },
+ {
+  "title": "창녕 발전기수리 ㅣ 바이오가스 엔진 점화오류, 원인은 픽업센서 손상",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.23",
+  "link": "https://blog.naver.com/gk8192/224420491938"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 라디에이터 코어 교체, 시운전까지 마쳤습니다(3일차)",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.22",
+  "link": "https://blog.naver.com/gk8192/224411840508"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 라디에이터 코어 누수 수리 (2일차)",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.21",
+  "link": "https://blog.naver.com/gk8192/224411832261"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 비상발전기 라디에이터 코어 누수 작업 (1일차)",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.18",
+  "link": "https://blog.naver.com/gk8192/224411820302"
+ },
+ {
+  "title": "대구 구암동 발전기수리 ㅣ 두산 D1146T 냉각수 부족·충전전압 이상 점검기",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.17",
+  "link": "https://blog.naver.com/gk8192/224408692232"
+ },
+ {
+  "title": "구리 발전기수리 ㅣ 두산 DP180LA 정기 소모품 전체 교체",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.09.16",
+  "link": "https://blog.naver.com/gk8192/224408679043"
+ },
+ {
+  "title": "하남 발전기수리 ㅣ 미쓰비시 S16R-PTA 냉각수 부족 점검",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.15",
+  "link": "https://blog.naver.com/gk8192/224408649407"
+ },
+ {
+  "title": "울산 발전기수리 ㅣ 대우 D0846 오버홀 및 정기검사 외함접지 AS",
+  "category": "고장수리(Repair)",
+  "date": "2026.09.14",
+  "link": "https://blog.naver.com/gk8192/224408641526"
+ },
+ {
+  "title": "하남 발전기수리 ㅣ 비상발전기 배터리 2 A 병렬 4개 교체",
+  "category": "소모품 교체 및 유지보수",
+  "date": "2026.09.13",
+  "link": "https://blog.naver.com/gk8192/224408635358"
  },
  {
   "title": "하남 발전기수리 ㅣ 정류기반 배터리 9개 교체, 무더위 속 지하 3층 운반작업",
