@@ -57,12 +57,15 @@ a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .cover .num{font-size:clamp(26px,3.4vw,34px);font-weight:900;white-space:nowrap}
 .cover .act small{color:#a9bbd6;font-size:14px}
 .cover .photo{position:relative}
-.cover .photo img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
-.cover .photo img.on{opacity:1}
-.dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:4px;z-index:2}
-.dots button{width:28px;height:28px;border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center}
-.dots button::after{content:"";width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.2)}
-.dots button.on::after{background:#fff;width:22px;border-radius:5px}
+.sl{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.2s ease;overflow:hidden;background:#0c1a33}
+.sl.on{opacity:1}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sl.tall .bg{filter:blur(22px) brightness(.55);transform:scale(1.15)}
+.sl.tall .fg{object-fit:contain}
+.ctl{position:absolute;right:14px;bottom:12px;z-index:2;display:flex;align-items:center;gap:2px;background:rgba(12,26,51,.62);border-radius:999px;padding:2px 4px;color:#fff;font-size:14px}
+.ctl button{width:40px;height:40px;border:0;background:transparent;color:#fff;font-size:26px;line-height:1;cursor:pointer;border-radius:50%}
+.ctl button:hover{background:rgba(255,255,255,.15)}
+.ctl .cnt{min-width:52px;text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}
 .about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:start}
 .about p+p{margin-top:12px}
 .stat{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:0;border-radius:10px;overflow:hidden;margin-top:28px}
@@ -169,7 +172,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 </div></nav>
 
 <header class="cover" id="top">
-<div class="photo" id="slides"><img src="img/gen-baudouin.jpg" alt="발전기실에 설치된 대형 비상발전기" class="on"><img src="img/case-gwangyang-mtu.jpg" alt="MTU 엔진 비상발전기와 교체용 소모품"><img src="img/gen-doosan.jpg" alt="두산 엔진 비상발전기 소모품 교체 준비"><img src="img/overhaul-block.jpg" alt="오버홀 중인 엔진 블록"><img src="img/gen-red.jpg" alt="발전기실의 비상발전기"><div class="dots"><button type="button" aria-label="1번째 사진" class="on"></button><button type="button" aria-label="2번째 사진"></button><button type="button" aria-label="3번째 사진"></button><button type="button" aria-label="4번째 사진"></button><button type="button" aria-label="5번째 사진"></button></div></div>
+<div class="photo" id="slides"><figure class="sl on"><img class="fg" src="img/gen-baudouin.jpg" alt="발전기실에 설치된 대형 비상발전기"></figure><figure class="sl"><img class="fg" src="img/hero-08.jpg" alt="MTU 엔진 대형 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-05.jpg" alt="두산 V형 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-11.jpg" alt="빨간색 대형 비상발전기"></figure><figure class="sl tall"><img class="bg" data-src="img/hero-06.jpg" alt="" aria-hidden="true"><img class="fg" data-src="img/hero-06.jpg" alt="청록색 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-16.jpg" alt="캐터필러 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-09.jpg" alt="커민스 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-10.jpg" alt="대형 직렬 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/hero-17.jpg" alt="가스엔진 발전기 정비"></figure><figure class="sl tall"><img class="bg" data-src="img/hero-12.jpg" alt="" aria-hidden="true"><img class="fg" data-src="img/hero-12.jpg" alt="연료필터 센서 결선 작업"></figure><figure class="sl"><img class="fg" data-src="img/hero-07.jpg" alt="두산 엔진 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/case-gwangyang-mtu.jpg" alt="MTU 엔진 비상발전기와 교체용 소모품"></figure><figure class="sl"><img class="fg" data-src="img/hero-02.jpg" alt="디젤 엔진 비상발전기와 제어반"></figure><figure class="sl"><img class="fg" data-src="img/hero-04.jpg" alt="직렬 6기통 엔진 비상발전기"></figure><figure class="sl tall"><img class="bg" data-src="img/hero-13.jpg" alt="" aria-hidden="true"><img class="fg" data-src="img/hero-13.jpg" alt="내시경 카메라로 엔진 내부 점검"></figure><figure class="sl"><img class="fg" data-src="img/hero-03.jpg" alt="소형 발전기 엔진 점검"></figure><figure class="sl"><img class="fg" data-src="img/gen-doosan.jpg" alt="두산 엔진 비상발전기 소모품 교체 준비"></figure><figure class="sl"><img class="fg" data-src="img/hero-01.jpg" alt="파란색 대형 비상발전기"></figure><figure class="sl"><img class="fg" data-src="img/overhaul-block.jpg" alt="오버홀 중인 엔진 블록"></figure><figure class="sl tall"><img class="bg" data-src="img/hero-14.jpg" alt="" aria-hidden="true"><img class="fg" data-src="img/hero-14.jpg" alt="발전기 운전반 조작"></figure><figure class="sl"><img class="fg" data-src="img/gen-red.jpg" alt="발전기실의 비상발전기"></figure><figure class="sl tall"><img class="bg" data-src="img/hero-15.jpg" alt="" aria-hidden="true"><img class="fg" data-src="img/hero-15.jpg" alt="발전기 제어반"></figure><div class="ctl"><button type="button" class="prev" aria-label="이전 사진">‹</button><span class="cnt"><b>1</b> / 22</span><button type="button" class="next" aria-label="다음 사진">›</button></div></div>
 <div class="block"><div class="in">
 <div>
 <span class="lbl" style="color:#ff6b64">COMPANY PROFILE</span>
@@ -366,10 +369,15 @@ fetch('latest.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
 }
 {
 const box=document.getElementById('slides');
-if(box){const im=[...box.querySelectorAll('img')],dt=[...box.querySelectorAll('.dots button')];let i=0,t;
-const go=n=>{im[i].classList.remove('on');dt[i].classList.remove('on');i=(n+im.length)%im.length;im[i].classList.add('on');dt[i].classList.add('on')};
+if(box){const sl=[...box.querySelectorAll('.sl')],num=box.querySelector(".cnt b");let i=0,t;
+const load=k=>sl[k].querySelectorAll('img[data-src]').forEach(m=>{m.src=m.dataset.src;m.removeAttribute('data-src')});
+const go=n=>{sl[i].classList.remove('on');i=(n+sl.length)%sl.length;load(i);load((i+1)%sl.length);sl[i].classList.add('on');num.textContent=i+1};
 const start=()=>{clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>go(i+1),4500)};
-dt.forEach((d,k)=>d.addEventListener('click',()=>{go(k);start()}));start();}
+box.querySelector('.prev').addEventListener('click',()=>{go(i-1);start()});
+box.querySelector('.next').addEventListener('click',()=>{go(i+1);start()});
+let x0=null;box.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+box.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));start()}x0=null});
+load(1);start();}
 const els=[...document.querySelectorAll('[data-count]')];
 const show=n=>els.forEach(e=>{if(!e.hasAttribute('data-anim'))e.textContent=n});
 const anim=n=>{const e=document.querySelector('[data-anim]');if(!e)return;
