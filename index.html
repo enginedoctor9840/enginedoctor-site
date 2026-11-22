@@ -56,6 +56,13 @@ a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 .cover .act{display:grid;gap:10px;justify-items:start}
 .cover .num{font-size:clamp(26px,3.4vw,34px);font-weight:900;white-space:nowrap}
 .cover .act small{color:#a9bbd6;font-size:14px}
+.cover .photo{position:relative}
+.cover .photo img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.cover .photo img.on{opacity:1}
+.dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:4px;z-index:2}
+.dots button{width:28px;height:28px;border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center}
+.dots button::after{content:"";width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.dots button.on::after{background:#fff;width:22px;border-radius:5px}
 .about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:start}
 .about p+p{margin-top:12px}
 .stat{display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:0;border-radius:10px;overflow:hidden;margin-top:28px}
@@ -159,13 +166,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 </div></nav>
 
 <header class="cover" id="top">
-<div class="photo"><img src="img/gen-baudouin.jpg" alt="발전기실에 설치된 대형 비상발전기"></div>
+<div class="photo" id="slides"><img src="img/gen-baudouin.jpg" alt="발전기실에 설치된 대형 비상발전기" class="on"><img src="img/case-gwangyang-mtu.jpg" alt="MTU 엔진 비상발전기와 교체용 소모품"><img src="img/gen-doosan.jpg" alt="두산 엔진 비상발전기 소모품 교체 준비"><img src="img/overhaul-block.jpg" alt="오버홀 중인 엔진 블록"><img src="img/gen-red.jpg" alt="발전기실의 비상발전기"><div class="dots"><button type="button" aria-label="1번째 사진" class="on"></button><button type="button" aria-label="2번째 사진"></button><button type="button" aria-label="3번째 사진"></button><button type="button" aria-label="4번째 사진"></button><button type="button" aria-label="5번째 사진"></button></div></div>
 <div class="block"><div class="in">
 <div>
 <span class="lbl" style="color:#ff6b64">COMPANY PROFILE</span>
 <h1 class="wordmark"><span class="ko">엔진닥터</span><span class="en">ENGINE DOCTOR</span><svg class="swoosh" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 C 90 4, 210 2, 298 6 L 298 10 C 210 7, 90 9, 2 16 Z" fill="#e2141a"/></svg></h1>
 <p class="sub">비상발전기 정비 · 수리 · 오버홀 전문</p>
-<div class="pills"><span class="pill">누적 약 500개 현장</span><span class="pill">아파트 · 건물 · 공공시설</span><span class="pill">전국 출장</span><span class="pill">사진·수치 작업완료보고서</span></div>
+<div class="pills"><span class="pill">누적 약 <span data-count>500</span>개 현장</span><span class="pill">아파트 · 건물 · 공공시설</span><span class="pill">전국 출장</span><span class="pill">사진·수치 작업완료보고서</span></div>
 </div>
 <div class="act">
 <small>비상발전기 문의</small>
@@ -181,9 +188,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 <h2>정전 그 순간,<br>반드시 돌아가야 하니까</h2>
 <hr class="rule">
 <p style="margin-top:22px">안녕하십니까, 엔진닥터 김부장입니다.</p>
-<p>비상발전기는 1년 내내 멈춰 있다가 정전이 나는 순간 반드시 돌아가야 하는 설비입니다. 엔진닥터는 아파트, 빌딩, 학교, 공공기관 등 전국 약 500곳의 현장에서 비상발전기를 점검하고 고쳐 왔습니다. 큰 고장이 나기 전에 작은 신호를 먼저 찾아내는 것이 저희 원칙입니다.</p>
+<p>비상발전기는 1년 내내 멈춰 있다가 정전이 나는 순간 반드시 돌아가야 하는 설비입니다. 엔진닥터는 아파트, 빌딩, 학교, 공공기관 등 전국 약 <span data-count>500</span>곳의 현장에서 비상발전기를 점검하고 고쳐 왔습니다. 큰 고장이 나기 전에 작은 신호를 먼저 찾아내는 것이 저희 원칙입니다.</p>
 <div class="stat">
-<div class="big"><b>약 500<small>곳</small></b><span>누적 작업 현장 · 전국 출장</span></div>
+<div class="big"><b>약 <span data-count data-anim>500</span><small>곳</small></b><span>누적 작업 현장 · 전국 출장</span></div>
 <ul>
 <li><b>아파트 · 건물 · 공공시설</b> 비상발전기 전반, LH 임대아파트 단지 정기 정비 다수 수행</li>
 <li><b>대학교 · 공공기관</b> 비상발전기 환경개선 공사</li>
@@ -353,6 +360,20 @@ fetch('latest.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
  if(!Array.isArray(d)||!d.length)return;
  box.innerHTML=d.map(x=>`<a class="crow" href="${esc(x.link)}"><span class="tag">${esc(x.category||'정비 사례')}${x.date?' · '+esc(x.date):''}</span><b>${esc(x.title)}</b><span class="ar">→</span></a>`).join('');
 }).catch(()=>{});
+}
+{
+const box=document.getElementById('slides');
+if(box){const im=[...box.querySelectorAll('img')],dt=[...box.querySelectorAll('.dots button')];let i=0,t;
+const go=n=>{im[i].classList.remove('on');dt[i].classList.remove('on');i=(n+im.length)%im.length;im[i].classList.add('on');dt[i].classList.add('on')};
+const start=()=>{clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>go(i+1),4500)};
+dt.forEach((d,k)=>d.addEventListener('click',()=>{go(k);start()}));start();}
+const els=[...document.querySelectorAll('[data-count]')];
+const show=n=>els.forEach(e=>{if(!e.hasAttribute('data-anim'))e.textContent=n});
+const anim=n=>{const e=document.querySelector('[data-anim]');if(!e)return;
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){e.textContent=n;return}
+ const io=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;io.disconnect();const t0=performance.now(),d=1600;
+  const step=t=>{const k=Math.min(1,(t-t0)/d);e.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)});io.observe(e)};
+fetch('stats.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{const n=d&&d.total?d.total:500;show(n);anim(n)}).catch(()=>anim(500));
 }
 </script>
 </body>
