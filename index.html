@@ -98,6 +98,9 @@ figcaption{font-size:13px;color:var(--mute);margin-top:6px}
 .more{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:26px}
 .more a.ln{font-weight:700;color:var(--blue);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px}
 .cases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:32px}
+.lhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin-top:34px}
+.allbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--blue);color:var(--blue);font-weight:700;text-decoration:none;white-space:nowrap}
+.allbtn:hover{background:var(--blue);color:#fff}
 .clist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:22px;border-top:1px solid var(--line)}
 .crow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .crow .tag{grid-column:1;font-size:13px;color:var(--blue);font-weight:700}
@@ -158,7 +161,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 <a class="brand" href="#top"><img src="img/logo.png" alt="Engine Doctor 로고"><span>엔진닥터</span></a>
 <a class="l" href="#services">서비스</a>
 <a class="l" href="#work">현장 사진</a>
-<a class="l" href="#cases">정비 사례</a>
+<a class="l" href="cases.html">정비 사례</a>
 <a class="l" href="#free">무료 상태점검</a>
 <a class="l" href="#contract">정기점검 계약</a>
 <a class="l" href="#faq">자주 묻는 질문</a>
@@ -260,7 +263,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 <a class="case" href="https://blog.naver.com/PostView.naver?blogId=gk8192&logNo=224382620420"><img src="img/case-gwangyang-mtu.jpg" alt="MTU 엔진 비상발전기와 교체용 소모품" style="object-position:center"><div class="tx"><span class="tag">유지보수 · 전남 광양</span><h3>MTU 16V2000G45 소모품·센서 교체</h3><p>소모품 교체와 함께 예열히터, 누수가 있던 순환펌프 센서까지 교체했습니다.</p><span class="go">블로그에서 자세히 보기 →</span></div></a>
 <a class="case" href="https://blog.naver.com/PostView.naver?blogId=gk8192&logNo=224360991462"><img src="img/case-namyangju-start.jpg" alt="비상발전기 스피드컨트롤러" style="object-position:center"><div class="tx"><span class="tag">고장 수리 · 경기 남양주</span><h3>비상발전기 시동불능 수리</h3><p>연료라인 에어빼기와 스피드컨트롤러 딜레이타임 조정으로 시동 문제를 해결했습니다.</p><span class="go">블로그에서 자세히 보기 →</span></div></a>
 </div>
-<h3 style="margin-top:34px">블로그 최신 사례</h3>
+<div class="lhead"><h3>블로그 최신 사례</h3><a class="allbtn" href="cases.html">전체 사례 보기 →</a></div>
 <div class="clist" id="clist">
 <a class="crow" href="https://blog.naver.com/PostView.naver?blogId=gk8192&logNo=224438382348"><span class="tag">고장 수리 · 대구 달서구</span><b>충전전압 이상 후속조치, 배터리충전기·소모품 교체</b><span class="ar">→</span></a>
 <a class="crow" href="https://blog.naver.com/PostView.naver?blogId=gk8192&logNo=224408627181"><span class="tag">유지보수 · 경기 하남</span><b>정류기반 배터리 9개 교체, 지하 3층 운반 작업</b><span class="ar">→</span></a>

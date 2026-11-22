@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>엔진닥터 정비 사례</title>
+<meta name="description" content="엔진닥터 비상발전기 정비 사례 전체 목록. 고장 수리, 소모품 교체·유지보수, 엔진 오버홀 현장 기록을 최신순으로 정리했습니다.">
+<link rel="canonical" href="https://enginedoctor.co.kr/cases.html">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* 메인 페이지와 같은 남색·빨강 톤의 사례 목록 페이지 */
+:root{color-scheme:light dark;--navy:#0c1a33;--bg:light-dark(#ffffff,#0a1428);--ink:light-dark(#0c1a33,#f1f3f6);--text:light-dark(#2b3645,#c9d3df);--mute:light-dark(#66717f,#94a2b3);--tint:light-dark(#eef0f3,#131f36);--red:light-dark(#e2141a,#ff5a52);--line:light-dark(#d9e1ea,#253552);--card:light-dark(#ffffff,#12213a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Noto Sans KR",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding-inline:max(5vw,16px)}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand img{height:42px;width:auto;background:#fff;border-radius:6px;padding:3px 5px}
+.brand span{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-size:21px;transform:skewX(-8deg);display:inline-block}
+.back{color:var(--mute);text-decoration:none;font-size:15px;padding:8px 0}
+header{background:var(--navy);color:#dfe8f5;border-top:5px solid #e2141a}
+header .wrap{padding-block:clamp(32px,5vw,56px)}
+.lbl{display:block;color:#ff6b64;font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+h1{margin:0;color:#fff;font-weight:900;font-size:clamp(30px,5vw,44px);letter-spacing:-.02em;line-height:1.2}
+header p{margin:10px 0 0;color:#b9c6da}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:28px 0 8px}
+.tools input{flex:1 1 220px;min-height:46px;font:inherit;font-size:16px;padding:0 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.tools input:focus{outline:2px solid var(--red);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.count{font-size:14px;color:var(--mute);margin:4px 0 6px}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:16px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.row .meta{font-size:13px;color:var(--red);font-weight:700}
+.row .meta time{color:var(--mute);font-weight:400;margin-left:8px;white-space:nowrap}
+.row b{grid-column:1;font-weight:700;font-size:16.5px;line-height:1.45}
+.row .ar{grid-column:2;grid-row:1/3;align-self:center;color:var(--red);font-weight:700}
+.row:hover b{text-decoration:underline}
+.empty{padding:40px 0;text-align:center;color:var(--mute)}
+.more{margin:28px 0 48px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.more a{font-weight:700;color:var(--red);text-decoration:none;border-bottom:2px solid currentColor}
+.call{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:8px;background:#e2141a;color:#fff;font-weight:700;text-decoration:none;white-space:nowrap}
+footer{border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding-block:22px}
+@media(max-width:600px){.desk{display:none}.call.fixed{position:fixed;left:12px;right:12px;bottom:12px;z-index:6;box-shadow:0 6px 18px rgba(0,0,0,.25)}body{padding-bottom:76px}}
+@media(min-width:601px){.call.fixed{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="./"><img src="img/logo.png" alt="Engine Doctor 로고"><span>엔진닥터</span></a>
+<a class="back" href="./">← 홈으로</a>
+</div></nav>
+
+<header><div class="wrap">
+<span class="lbl">CASES</span>
+<h1>정비 사례 전체 보기</h1>
+<p>블로그에 기록한 비상발전기 정비 현장을 최신순으로 모았습니다. 제목을 누르면 블로그 글로 이동합니다.</p>
+</div></header>
+
+<main class="wrap">
+<div class="tools"><input id="q" type="search" placeholder="지역·엔진·증상으로 검색" aria-label="사례 검색"></div>
+<div class="chips" id="chips">
+<button class="chip" type="button" data-c="" aria-pressed="true">전체</button>
+<button class="chip" type="button" data-c="수리" aria-pressed="false">고장 수리</button>
+<button class="chip" type="button" data-c="소모품" aria-pressed="false">소모품 교체 · 유지보수</button>
+<button class="chip" type="button" data-c="오버홀" aria-pressed="false">엔진 오버홀</button>
+</div>
+<p class="count" id="count"></p>
+<div class="list" id="list"><p class="empty">사례를 불러오는 중입니다…</p></div>
+<div class="more">
+<span>더 많은 현장 기록은 블로그에서 보실 수 있습니다.</span>
+<a href="https://blog.naver.com/gk8192">네이버 블로그 바로가기 →</a>
+<a class="call desk" href="tel:01066404680">전화 문의 010-6640-4680</a>
+</div>
+</main>
+
+<footer><div class="wrap">
+<span><b style="color:var(--ink)">엔진닥터</b> · 비상발전기 정비·수리·오버홀 전문</span>
+<span>010-6640-4680</span>
+<a href="./">enginedoctor.co.kr</a>
+</div></footer>
+
+<a class="call fixed" href="tel:01066404680">전화 문의 010-6640-4680</a>
+
+<script>
+{
+const list=document.getElementById('list'),count=document.getElementById('count'),q=document.getElementById('q');
+const chips=[...document.querySelectorAll('.chip')];
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let all=[],cat='';
+const render=()=>{
+ const k=q.value.trim().toLowerCase();
+ const rows=all.filter(x=>(!cat||(x.category||'').includes(cat))&&(!k||(x.title+' '+(x.category||'')).toLowerCase().includes(k)));
+ count.textContent=`총 ${rows.length}건`;
+ list.innerHTML=rows.length?rows.map(x=>`<a class="row" href="${esc(x.link)}"><span class="meta">${esc(x.category||'정비 사례')}${x.date?`<time>${esc(x.date)}</time>`:''}</span><b>${esc(x.title)}</b><span class="ar">→</span></a>`).join(''):'<p class="empty">조건에 맞는 사례가 없습니다.</p>';
+};
+chips.forEach(c=>c.addEventListener('click',()=>{cat=c.dataset.c;chips.forEach(o=>o.setAttribute('aria-pressed',String(o===c)));render()}));
+q.addEventListener('input',render);
+fetch('cases_all.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(d=>{all=Array.isArray(d)?d:[];render()}).catch(()=>{list.innerHTML='<p class="empty">사례를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>'});
+}
+</script>
+</body>
+</html>

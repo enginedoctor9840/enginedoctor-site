@@ -8,6 +8,7 @@ BLOG_ID = "gk8192"
 RSS = f"https://rss.blog.naver.com/{BLOG_ID}.xml"
 OUT = "latest.json"
 STATS = "stats.json"
+ARCHIVE = "cases_all.json"   # 전체 사례 페이지용, 지금까지 본 글을 계속 쌓아 둔다
 # 2일차·3일차처럼 같은 현장 이어지는 글은 현장 수에 다시 세지 않음
 SERIES = re.compile(r"([2-9]|1\d)\s*일차|[2-9]\s*편|\(\s*[2-9]\s*\)")
 LIMIT = 8
@@ -36,12 +37,27 @@ def update_stats(found):
     json.dump(st, open(STATS, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"누적 현장 수: {st['total']}")
 
+def update_archive(found):
+    """RSS에 보이는 글을 기존 목록과 합쳐 최신순으로 저장 (오래된 글도 지우지 않음)."""
+    try:
+        arch = json.load(open(ARCHIVE, encoding="utf-8"))
+    except FileNotFoundError:
+        arch = []
+    by = {a["link"]: a for a in arch}
+    for rec in found:
+        old = by.get(rec["link"], {})
+        by[rec["link"]] = {**old, **{k: v for k, v in rec.items() if v}}
+    out = sorted(by.values(), key=lambda a: (a.get("date", "") != "", a.get("date", ""), a["link"]), reverse=True)
+    json.dump(out, open(ARCHIVE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"전체 사례 {len(out)}건")
+
 def main():
     req = urllib.request.Request(RSS, headers={"User-Agent": "Mozilla/5.0 (enginedoctor site updater)"})
     with urllib.request.urlopen(req, timeout=30) as r:
         root = ET.fromstring(r.read())
     items = []
     counted_new = []
+    all_items = []
     for it in root.iter("item"):
         title = (it.findtext("title") or "").strip()
         cat = (it.findtext("category") or "").strip()
@@ -56,9 +72,12 @@ def main():
         t = re.sub(r"\s{2,}", " ", t).strip()
         link = clean_link(it.findtext("link") or "")
         counted_new.append((link, date, title))
+        rec = {"title": t, "category": cat, "date": date, "link": link}
+        all_items.append(rec)
         if len(items) < LIMIT:
-            items.append({"title": t, "category": cat, "date": date, "link": link})
+            items.append(rec)
     update_stats(counted_new)
+    update_archive(all_items)
     if not items:
         print("RSS에서 사례를 찾지 못해 기존 목록을 유지합니다.")
         return 0
