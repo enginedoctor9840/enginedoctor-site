@@ -37,6 +37,7 @@ img{max-width:100%;display:block}
 .lbl{display:block;color:var(--blue);font-size:13px;font-weight:700;letter-spacing:.08em;margin-bottom:10px}
 .rule{width:40px;height:3px;background:var(--blue);margin:18px 0 0;border:0}
 nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.menu{display:flex;flex-wrap:wrap;gap:4px 22px}
 nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;padding:10px max(5vw,16px)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;color:var(--ink);font-weight:900;font-size:19px}
 .brand img{height:42px;width:auto;background:#fff;border-radius:6px;padding:3px 5px}
@@ -168,17 +169,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:6px 26px;padding:22px max(5vw,16px)
 .brand span{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-weight:400;font-size:21px;transform:skewX(-8deg);display:inline-block}
 .mobile-call{display:none}
 @media(max-width:900px){.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.clist{grid-template-columns:minmax(0,1fr)}.cover .in,.about,.free .g,.qa{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.card{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:600px){.call:not(.mobile-call){display:none}.plan{grid-template-columns:minmax(0,1fr)}.cases{grid-template-columns:minmax(0,1fr)}nav a.l{display:none}.svcs,.rep{grid-template-columns:minmax(0,1fr)}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gal .tall{grid-row:auto}.gal .tall img{aspect-ratio:4/3}.trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:minmax(0,1fr)}.mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:6;box-shadow:0 6px 18px rgba(0,0,0,.25)}body{padding-bottom:76px}}
+@media(max-width:600px){.call:not(.mobile-call){display:none}.plan{grid-template-columns:minmax(0,1fr)}.cases{grid-template-columns:minmax(0,1fr)}.menu{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;gap:4px;margin:2px -4px 0;padding-bottom:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.menu::-webkit-scrollbar{display:none}.menu a.l{flex:none;font-size:14.5px;padding:8px 10px;border-radius:999px;background:var(--tint);color:var(--ink)}html{scroll-padding-top:120px}nav .wrap{padding-bottom:8px}.svcs,.rep{grid-template-columns:minmax(0,1fr)}.gal{grid-template-columns:repeat(2,minmax(0,1fr))}.gal .tall{grid-row:auto}.gal .tall img{aspect-ratio:4/3}.trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{grid-template-columns:minmax(0,1fr)}.steps{grid-template-columns:minmax(0,1fr)}.mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:6;box-shadow:0 6px 18px rgba(0,0,0,.25)}body{padding-bottom:76px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
 <a class="brand" href="#top"><img src="img/logo.png" alt="Engine Doctor 로고"><span>엔진닥터</span></a>
+<div class="menu">
 <a class="l" href="#services">서비스</a>
-<a class="l" href="cases.html">정비 사례</a>
+<a class="l" href="#cases">정비 사례</a>
+<a class="l" href="#report">작업 보고서</a>
 <a class="l" href="#free">무료 상태점검</a>
 <a class="l" href="#contract">정기점검 계약</a>
 <a class="l" href="#faq">자주 묻는 질문</a>
+<a class="l" href="#contact">연락처</a>
+</div>
 <a class="call" href="tel:01066404680">전화 문의</a>
 </div></nav>
 
